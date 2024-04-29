@@ -1,0 +1,140 @@
+body {
+  background-image: url('Background.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.1); 
+  border-radius: 0; 
+  padding: 20px;
+  width: 500px;
+  height: 670px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); 
+  backdrop-filter: blur(10px); 
+  border: none; 
+  animation: fadeInUp 1s ease;
+}
+
+h2.center {
+  text-align: center;
+  font-family: 'Lugrasimo', sans-serif;
+  background: rgb(0,255,219);
+  background: linear-gradient(0deg, rgba(0,255,219,1) 10%, rgba(36,36,133,1) 80%);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  font-size: 40px;
+  animation: fadeIn 1s ease;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-family: 'Kaushan Script', cursive;
+  color: white; 
+  animation: slideInLeft 1s ease forwards;
+}
+
+input[type="text"],
+textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  animation: slideInRight 1s ease forwards;
+}
+
+textarea {
+  height: 100px;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.oval-button {
+  background: rgb(12,8,79);
+  background: linear-gradient(90deg, rgba(12,8,79,1) 6%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 80%);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Kaushan Script', cursive;
+  animation: slideInRight 1s ease forwards;
+}
+
+.oval-button:hover {
+  transform: scale(1.1);
+}
+
+.warning-message {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 999;
+  display: none;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  form {
+    width: 90%; 
+    height: auto; 
+  }
+}
